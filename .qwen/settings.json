@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp *)",
+      "Bash(diff *)",
+      "Bash(which *)",
+      "Bash(gsd *)",
+      "Bash(npm *)",
+      "Bash(pip list)",
+      "Bash(find *)",
+      "Bash(rm *)",
+      "Bash(do *)",
+      "Bash(then *)",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(ls *)",
+      "Bash(test *)",
+      "Bash(npx *)",
+      "Bash(source *)",
+      "Bash(sleep *)",
+      "Bash(curl *)",
+      "Bash(pkill *)",
+      "Bash(ss *)",
+      "Bash(cat *)",
+      "Bash(kill *)",
+      "Bash(timeout *)",
+      "Bash(mkdir *)",
+      "Bash(mv *)",
+      "Bash(wait)",
+      "Bash(node *)",
+      "Bash(docker build *)",
+      "Bash(docker push *)",
+      "Bash(ssh *)",
+      "Bash(scp *)",
+      "Bash(yes)"
+    ]
+  },
+  "$version": 3
+}

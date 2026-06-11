@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --border: rgba(201, 168, 76, 0.15);
+    --site-nav-height: 3.75rem;
+    /* Breathing room below sticky navbar on marketing subpages (≈80px–120px) */
+    --page-offset-top: clamp(5rem, 3.25rem + 3.5vw, 7.5rem);
+
+    /* Compact typography scale — Inter, navbar-aligned */
+    --text-h1: clamp(2rem, 1.625rem + 1.25vw, 3rem); /* 32–36px → 48px */
+    --text-h2: clamp(1.625rem, 1.45rem + 0.75vw, 2.375rem); /* 26–30px → 38px */
+    --text-h3: clamp(1.375rem, 1.25rem + 0.45vw, 1.875rem); /* 22–24px → 30px */
+    --text-h4: clamp(1.25rem, 1.2rem + 0.12vw, 1.375rem); /* 20–22px */
+    --text-h5: 1.125rem; /* 18px */
+    --text-body: 0.9375rem; /* 15px */
+    --text-secondary: 0.875rem; /* 14px */
+    --text-small: 0.8125rem; /* 13px */
+    --text-caption: 0.75rem; /* 12px */
+
+    --leading-heading: 1.15;
+    --leading-heading-tight: 1.2;
+    --leading-body: 1.6;
+    --leading-snug: 1.45;
+
+    --tracking-tight: -0.02em;
+    --tracking-eyebrow: 0.14em;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply font-sans text-body font-normal leading-body text-neutral-900 antialiased;
+  }
+
+  h1 {
+    @apply font-sans text-h1 font-semibold tracking-tight text-neutral-950;
+  }
+
+  h2 {
+    @apply font-sans text-h2 font-semibold tracking-tight text-neutral-950;
+  }
+
+  h3 {
+    @apply font-sans text-h3 font-semibold tracking-tight text-neutral-950;
+  }
+
+  h4 {
+    @apply font-sans text-h4 font-semibold tracking-tight text-neutral-950;
+  }
+
+  h5 {
+    @apply font-sans text-h5 font-semibold tracking-tight text-neutral-950;
+  }
+}
+
+@layer components {
+  .type-nav {
+    @apply font-sans text-secondary font-medium text-neutral-600;
+  }
+
+  .type-nav-brand {
+    @apply font-sans text-secondary font-semibold tracking-tight text-neutral-900;
+  }
+
+  .type-nav-cta {
+    @apply font-sans text-secondary font-semibold;
+  }
+
+  .type-eyebrow {
+    @apply font-sans text-caption font-semibold uppercase tracking-eyebrow text-neutral-500;
+  }
+
+  .type-prose {
+    @apply font-sans text-body font-normal leading-body text-neutral-700;
+  }
+
+  .type-prose-secondary {
+    @apply font-sans text-secondary font-normal leading-body text-neutral-600;
+  }
+
+  .type-quote {
+    @apply font-sans text-h4 font-medium italic leading-snug tracking-tight text-neutral-800;
+  }
+
+  .type-template-preview {
+    @apply font-sans text-h5 font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-[15px] bg-black/35;
+  }
+  .glass-border {
+    border-color: rgba(201, 168, 76, 0.3);
+  }
+  .text-glow {
+    text-shadow: 0 0 30px var(--glow-color, rgba(201, 168, 76, 0.3));
+  }
+  .card-shadow {
+    box-shadow:
+      inset 0 0 80px rgba(0, 0, 0, 0.5),
+      0 30px 80px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(201, 168, 76, 0.1);
+  }
+  .card-inner-shadow {
+    box-shadow: inset 5px 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+}

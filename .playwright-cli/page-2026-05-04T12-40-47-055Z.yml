@@ -1,0 +1,65 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link [ref=e5] [cursor=pointer]:
+          - /url: /dashboard/admin
+          - button [ref=e6]:
+            - img [ref=e7]
+        - generic [ref=e9]:
+          - img [ref=e10]
+          - text: WhatsApp Sender
+      - button [ref=e12] [cursor=pointer]:
+        - img [ref=e13]
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "Shared Application Sender" [level=1] [ref=e18]
+        - paragraph [ref=e19]: Connect and monitor the single WhatsApp number used for all invitation reminders and updates.
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - paragraph [ref=e22]: Opted-In Recipients
+          - paragraph [ref=e23]: "0"
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: Messages Sent
+          - paragraph [ref=e26]: "0"
+        - generic [ref=e27]:
+          - paragraph [ref=e28]: Failed Sends
+          - paragraph [ref=e29]: "0"
+      - generic [ref=e31]:
+        - img [ref=e32]
+        - generic [ref=e34]:
+          - heading "Sender Rules" [level=2] [ref=e35]
+          - paragraph [ref=e36]: This sender belongs to the application. Hosts cannot connect their own numbers or access QR controls. Guest messages are still scoped per invitation by RSVP consent.
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - heading "Sender Session" [level=2] [ref=e40]
+            - paragraph [ref=e41]: "Session ID: eternally-yours-main"
+          - generic [ref=e42]:
+            - button "Refresh" [ref=e43] [cursor=pointer]:
+              - img [ref=e44]
+              - text: Refresh
+            - button "Connect" [ref=e49] [cursor=pointer]:
+              - img [ref=e50]
+              - text: Connect
+            - button "Show QR" [ref=e53] [cursor=pointer]:
+              - img [ref=e54]
+              - text: Show QR
+            - button "Disconnect" [ref=e60] [cursor=pointer]:
+              - img [ref=e61]
+              - text: Disconnect
+        - generic [ref=e68]:
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - img [ref=e72]
+                - paragraph [ref=e76]: unknown
+              - paragraph [ref=e77]: Connect the sender and scan the QR code with the platform-owned WhatsApp number before sending updates.
+            - generic [ref=e78]:
+              - heading "Operational Notes" [level=3] [ref=e79]
+              - paragraph [ref=e80]: Keep this page admin-only. The QR belongs to the shared sender number, not to invitation hosts. If messages fail with session_not_connected, reconnect here and scan the QR again.
+          - generic [ref=e82]:
+            - img [ref=e83]
+            - paragraph [ref=e89]: No QR Loaded
+            - paragraph [ref=e90]: Click Show QR after starting the connection.
+  - alert [ref=e91]

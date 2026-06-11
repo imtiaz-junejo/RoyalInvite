@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "opencli-adapter-author": {
+      "source": "jackwener/opencli",
+      "sourceType": "github",
+      "skillPath": "skills/opencli-adapter-author/SKILL.md",
+      "computedHash": "4fb4e79b6c6974e670dfabe0dc51031dd24fa17332fb9901fa8a2339a52c6f24"
+    },
+    "opencli-browser": {
+      "source": "jackwener/opencli",
+      "sourceType": "github",
+      "skillPath": "skills/opencli-browser/SKILL.md",
+      "computedHash": "53a35e499c5c21624bcb2e9a7a1acc00c6da087b0ecec39444c8bfb941bf0498"
+    }
+  }
+}

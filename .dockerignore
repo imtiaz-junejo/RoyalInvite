@@ -1,0 +1,10 @@
+.git
+.next
+node_modules
+*.log
+.env.local
+.env
+data
+prisma/dev.db
+docs
+mysql-data

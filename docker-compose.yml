@@ -1,0 +1,41 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: eternally-yours-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_change_me
+      MYSQL_DATABASE: eternally_yours
+      MYSQL_USER: eternally_yours
+      MYSQL_PASSWORD: eternally_yours_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot_password_change_me"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  app:
+    image: eternally-yours:local
+    container_name: eternally-yours-app
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: mysql://eternally_yours:eternally_yours_password@mysql:3306/eternally_yours
+      NEXTAUTH_SECRET: IczXRgIeCsSHNvNVIRib8uz2TzPbTd9PeVFk01qZop8=
+      NEXTAUTH_URL: http://localhost:3000
+      WHATSAPP_GATEWAY_URL: http://host.docker.internal:3020
+      WHATSAPP_SESSION_ID: eternally-yours-main
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

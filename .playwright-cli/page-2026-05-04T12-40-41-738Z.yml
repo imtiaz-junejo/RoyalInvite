@@ -1,0 +1,43 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e19]: Dashboard | Eternally Yours
+  - generic [ref=e20]:
+    - banner [ref=e21]:
+      - link "💍 ETERNALLY YOURS" [ref=e22] [cursor=pointer]:
+        - /url: /dashboard
+        - generic [ref=e23]: 💍
+        - generic [ref=e24]: ETERNALLY YOURS
+      - generic [ref=e25]:
+        - link [ref=e26] [cursor=pointer]:
+          - /url: /dashboard/settings
+          - button [ref=e27]:
+            - img [ref=e28]
+        - button [ref=e31] [cursor=pointer]:
+          - img [ref=e32]
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - heading "Welcome, Admin" [level=1] [ref=e38]
+          - generic [ref=e39]:
+            - paragraph [ref=e40]: 0 invitations created
+            - paragraph [ref=e41]:
+              - img [ref=e42]
+              - text: 0 total views
+            - generic [ref=e44]: Pro Tier
+        - generic [ref=e45]:
+          - link "🛡️ Admin" [ref=e46] [cursor=pointer]:
+            - /url: /dashboard/admin
+            - button "🛡️ Admin" [ref=e47]
+          - link "New Invitation" [ref=e48] [cursor=pointer]:
+            - /url: /dashboard/invitations/new
+            - button "New Invitation" [ref=e49]:
+              - img [ref=e50]
+              - text: New Invitation
+      - generic [ref=e51]:
+        - paragraph [ref=e52]: 💌
+        - heading "No Invitations Yet" [level=2] [ref=e53]
+        - paragraph [ref=e54]: Create your first beautiful wedding invitation.
+        - link "Create Invitation" [ref=e55] [cursor=pointer]:
+          - /url: /dashboard/invitations/new
+          - button "Create Invitation" [ref=e56]:
+            - img [ref=e57]
+            - text: Create Invitation

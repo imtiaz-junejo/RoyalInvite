@@ -1,0 +1,124 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - paragraph [ref=e7]: Premium Wedding Invitations
+      - heading "Premium Wedding Invitation Builder" [level=1] [ref=e8]
+      - paragraph [ref=e9]: Create stunning animated wedding invitations with 3D card reveals, elegant themes, and shareable links — in minutes.
+      - generic [ref=e10]:
+        - link "Start Creating" [ref=e11] [cursor=pointer]:
+          - /url: /sign-up
+          - button "Start Creating" [ref=e12]
+        - link "View Templates" [ref=e13] [cursor=pointer]:
+          - /url: /templates
+          - button "View Templates" [ref=e14]
+      - paragraph [ref=e15]:
+        - text: Explore
+        - link "pricing" [ref=e16] [cursor=pointer]:
+          - /url: /pricing
+        - text: ", learn more"
+        - link "about us" [ref=e17] [cursor=pointer]:
+          - /url: /about
+        - text: ", or"
+        - link "get in touch" [ref=e18] [cursor=pointer]:
+          - /url: /contact
+        - text: .
+    - img [ref=e20]
+  - generic [ref=e23]:
+    - heading "Why Couples Choose Us" [level=2] [ref=e24]
+    - paragraph [ref=e25]: Every detail designed to make your invitation as special as your love story.
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - img [ref=e28]
+        - heading "Premium Themes" [level=3] [ref=e30]
+        - paragraph [ref=e31]: Royal Gold, Rose Blush, Emerald Night, and Minimal Ivory — each handcrafted.
+      - generic [ref=e32]:
+        - img [ref=e33]
+        - heading "3D Card Animation" [level=3] [ref=e35]
+        - paragraph [ref=e36]: A beautiful card-opening reveal that delights every guest.
+      - generic [ref=e37]:
+        - img [ref=e38]
+        - heading "Share Anywhere" [level=3] [ref=e44]
+        - paragraph [ref=e45]: Unique links, QR codes, WhatsApp, and email sharing built in.
+      - generic [ref=e46]:
+        - img [ref=e47]
+        - heading "Background Music" [level=3] [ref=e51]
+        - paragraph [ref=e52]: Add your special song to set the mood as guests open your invitation.
+      - generic [ref=e53]:
+        - img [ref=e54]
+        - heading "RSVP Collection" [level=3] [ref=e56]
+        - paragraph [ref=e57]: Guests can respond directly. Track responses from your dashboard.
+      - generic [ref=e58]:
+        - img [ref=e59]
+        - heading "Countdown Timer" [level=3] [ref=e62]
+        - paragraph [ref=e63]: Build anticipation with a live countdown to your special day.
+  - generic [ref=e65]:
+    - heading "Elegant Wedding Invitation Templates" [level=2] [ref=e66]
+    - paragraph [ref=e67]:
+      - text: Start from a preset and make it yours.
+      - link "Browse all templates →" [ref=e68] [cursor=pointer]:
+        - /url: /templates
+    - generic [ref=e69]:
+      - link "Classic Royal wedding invitation template preview Classic Royal" [ref=e70] [cursor=pointer]:
+        - /url: /templates
+        - generic [ref=e71]:
+          - img "Classic Royal wedding invitation template preview" [ref=e72]:
+            - generic [ref=e73]: Preview
+          - paragraph [ref=e75]: Classic Royal
+      - link "Floral Romance wedding invitation template preview Floral Romance" [ref=e76] [cursor=pointer]:
+        - /url: /templates
+        - generic [ref=e77]:
+          - img "Floral Romance wedding invitation template preview" [ref=e78]:
+            - generic [ref=e79]: Preview
+          - paragraph [ref=e81]: Floral Romance
+      - link "Modern Minimal wedding invitation template preview Modern Minimal" [ref=e82] [cursor=pointer]:
+        - /url: /templates
+        - generic [ref=e83]:
+          - img "Modern Minimal wedding invitation template preview" [ref=e84]:
+            - generic [ref=e85]: Preview
+          - paragraph [ref=e87]: Modern Minimal
+  - generic [ref=e89]:
+    - heading "Frequently Asked Questions" [level=2] [ref=e90]
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - heading "Is it free to create an invitation?" [level=3] [ref=e93]
+        - paragraph [ref=e94]: Yes! Sign up and create your first invitation completely free.
+      - generic [ref=e95]:
+        - heading "Can I customize the design?" [level=3] [ref=e96]
+        - paragraph [ref=e97]: Absolutely. Choose themes, fonts, colors, music, cover images, gallery photos, and every text detail.
+      - generic [ref=e98]:
+        - heading "How do guests view my invitation?" [level=3] [ref=e99]
+        - paragraph [ref=e100]: You get a unique shareable URL. Guests open it on any device and see your beautiful animated invitation.
+      - generic [ref=e101]:
+        - heading "Can I collect RSVPs?" [level=3] [ref=e102]
+        - paragraph [ref=e103]: Yes. Your invitation includes an RSVP form. Responses appear in your dashboard.
+      - generic [ref=e104]:
+        - heading "Can I add background music?" [level=3] [ref=e105]
+        - paragraph [ref=e106]: Yes. Provide a direct MP3 URL and your invitation will play it.
+  - generic [ref=e108]:
+    - heading "Your Story Deserves Beauty" [level=2] [ref=e109]
+    - paragraph [ref=e110]:
+      - text: Create your wedding invitation in minutes. Share it with the world.
+      - link "See pricing →" [ref=e111] [cursor=pointer]:
+        - /url: /pricing
+    - link "Get Started Free" [ref=e112] [cursor=pointer]:
+      - /url: /sign-up
+      - button "Get Started Free" [ref=e113]
+  - contentinfo [ref=e114]:
+    - generic [ref=e115]:
+      - generic [ref=e116]:
+        - generic [ref=e117]: 💍
+        - generic [ref=e118]: ETERNALLY YOURS
+      - generic [ref=e119]:
+        - link "About" [ref=e120] [cursor=pointer]:
+          - /url: /about
+        - link "Contact" [ref=e121] [cursor=pointer]:
+          - /url: /contact
+        - link "Pricing" [ref=e122] [cursor=pointer]:
+          - /url: /pricing
+        - link "Templates" [ref=e123] [cursor=pointer]:
+          - /url: /templates
+        - link "Privacy" [ref=e124] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=e125] [cursor=pointer]:
+          - /url: /terms
+      - paragraph [ref=e126]: © 2025 SikanderKumbhar Invite

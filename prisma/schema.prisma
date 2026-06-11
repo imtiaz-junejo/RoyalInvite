@@ -1,0 +1,184 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String          @id @default(cuid())
+  name           String
+  email          String          @unique
+  passwordHash   String
+  role           String          @default("user")
+  tier           String          @default("free")
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  invitations    Invitation[]
+  mobileSessions MobileSession[]
+
+  @@map("users")
+}
+
+model MobileSession {
+  id        String   @id @default(cuid())
+  userId    String
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("mobile_sessions")
+}
+
+model Invitation {
+  id                  String               @id @default(cuid())
+  userId              String
+  title               String               @db.VarChar(255)
+  slug                String               @unique
+  brideName           String
+  groomName           String
+  headline            String?              @db.VarChar(255)
+  secondaryHeadline   String?              @db.VarChar(255)
+  eventDate           DateTime
+  eventTime           String
+  venueName           String               @db.VarChar(255)
+  venueAddress        String?              @db.VarChar(500)
+  googleMapsLink      String?              @db.VarChar(500)
+  message             String?              @db.Text
+  secondaryMessage    String?              @db.Text
+  storyTitle          String?              @db.VarChar(255)
+  storyText           String?              @db.Text
+  secondaryStoryTitle String?              @db.VarChar(255)
+  secondaryStoryText  String?              @db.Text
+  galleryText         String?              @db.Text
+  eventSeriesTitle    String?              @db.VarChar(255)
+  eventSeriesText     String?              @db.Text
+  mealOptions         String?              @db.VarChar(500)
+  primaryLanguage     String               @default("en")
+  secondaryLanguage   String?
+  rsvpContact         String?              @db.VarChar(255)
+  rsvpDeadline        String?
+  dressCode           String?
+  familyNames         String?              @db.VarChar(255)
+  coverImage          String?              @db.VarChar(500)
+  musicTitle          String?              @db.VarChar(255)
+  musicArtist         String?              @db.VarChar(255)
+  musicUrl            String?              @db.VarChar(500)
+  fontKey             String               @default("cormorant")
+  themeKey            String               @default("gold")
+  templateKey         String               @default("royal")
+  customStyles        String?              @db.Text
+  isPublished         Boolean              @default(false)
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+  gallery             GalleryImage[]
+  guestbookEntries    GuestbookEntry[]
+  views               InvitationView[]
+  user                User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  rsvps               Rsvp[]
+  scheduleItems       ScheduleItem[]
+  whatsappMessageLogs WhatsAppMessageLog[]
+
+  @@index([userId])
+  @@index([slug])
+  @@map("invitations")
+}
+
+model GalleryImage {
+  id           String     @id @default(cuid())
+  invitationId String
+  url          String     @db.VarChar(500)
+  caption      String?    @db.VarChar(255)
+  order        Int        @default(0)
+  createdAt    DateTime   @default(now())
+  invitation   Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId], map: "gallery_images_invitationId_fkey")
+  @@map("gallery_images")
+}
+
+model Rsvp {
+  id                  String               @id @default(cuid())
+  invitationId        String
+  guestName           String               @db.VarChar(255)
+  guestEmail          String?
+  guestCount          Int                  @default(1)
+  mealPreference      String?
+  guestWhatsapp       String?
+  whatsappConsent     Boolean              @default(false)
+  checkInCode         String?              @unique
+  checkedInAt         DateTime?
+  attendanceStatus    String               @default("pending")
+  message             String?              @db.Text
+  responseSource      String?
+  lastReminderSentAt  DateTime?
+  lastUpdateSentAt    DateTime?
+  createdAt           DateTime             @default(now())
+  invitation          Invitation           @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+  whatsappMessageLogs WhatsAppMessageLog[]
+
+  @@index([invitationId])
+  @@index([invitationId, whatsappConsent])
+  @@map("rsvps")
+}
+
+model WhatsAppMessageLog {
+  id               String     @id @default(cuid())
+  invitationId     String
+  rsvpId           String?
+  messageType      String
+  recipient        String
+  message          String     @db.Text
+  status           String     @default("pending")
+  gatewayMessageId String?
+  error            String?    @db.Text
+  sentAt           DateTime?
+  createdAt        DateTime   @default(now())
+  invitation       Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+  rsvp             Rsvp?      @relation(fields: [rsvpId], references: [id])
+
+  @@index([invitationId])
+  @@index([rsvpId])
+  @@map("whatsapp_message_logs")
+}
+
+model InvitationView {
+  id           String     @id @default(cuid())
+  invitationId String
+  viewedAt     DateTime   @default(now())
+  source       String?
+  invitation   Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId])
+  @@map("invitation_views")
+}
+
+model GuestbookEntry {
+  id           String     @id @default(cuid())
+  invitationId String
+  guestName    String     @db.VarChar(255)
+  message      String     @db.Text
+  createdAt    DateTime   @default(now())
+  invitation   Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId])
+  @@map("guestbook_entries")
+}
+
+model ScheduleItem {
+  id           String     @id @default(cuid())
+  invitationId String
+  time         String
+  event        String     @db.VarChar(255)
+  order        Int        @default(0)
+  createdAt    DateTime   @default(now())
+  invitation   Invitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId], map: "schedule_items_invitationId_fkey")
+  @@map("schedule_items")
+}
