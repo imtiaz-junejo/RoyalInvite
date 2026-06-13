@@ -18,7 +18,7 @@ export function PrintInvitationVisual() {
             <p className="text-[8px] font-medium uppercase tracking-[0.2em] text-rose-100/90">
               Save the date for the wedding of
             </p>
-            <p className="mt-3 font-serif text-sm font-semibold leading-snug text-white">
+            <p className="mt-3 font-sans text-sm font-semibold leading-snug text-white">
               Alex <span className="text-rose-200/80">&</span> Jordan
             </p>
             <p className="mt-2 text-[10px] font-medium tracking-wider text-rose-100/80">NOV 08 2026</p>
@@ -32,7 +32,7 @@ export function PrintInvitationVisual() {
           <div className="aspect-[9/16] overflow-hidden rounded-xl bg-gradient-to-b from-rose-900 to-rose-950">
             <div className="flex h-full flex-col items-center justify-center p-2 text-center">
               <p className="text-[6px] text-rose-100/80">3D reveal</p>
-              <p className="mt-1 font-serif text-[9px] text-white">Alex & Jordan</p>
+              <p className="mt-1 font-sans text-[9px] text-white">Alex & Jordan</p>
             </div>
           </div>
         </div>

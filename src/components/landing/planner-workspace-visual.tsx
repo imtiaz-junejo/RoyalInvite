@@ -21,7 +21,7 @@ export function PlannerWorkspaceVisual() {
         <div className="relative z-20 mx-auto mt-4 w-[min(100%,260px)] rotate-1 overflow-hidden rounded-2xl shadow-2xl shadow-neutral-900/20">
           <div className="aspect-[3/4] bg-gradient-to-b from-amber-300 via-orange-400 to-rose-500">
             <div className="flex h-full flex-col justify-between p-4 text-white">
-              <p className="text-center font-serif text-lg font-semibold drop-shadow-md">Tony & Amy</p>
+              <p className="text-center font-sans text-lg font-semibold drop-shadow-md">Tony & Amy</p>
               <div className="rounded-lg border-2 border-white/80 bg-white/20 p-2 backdrop-blur-sm">
                 <p className="text-center text-[10px] font-semibold">08/27/2026 @ 5 PM</p>
                 <p className="mt-1 text-center text-[8px] opacity-90">Reception to follow · RSVP in invite</p>

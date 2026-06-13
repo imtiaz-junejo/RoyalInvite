@@ -34,13 +34,14 @@
   }
 
   html {
+    font-family: var(--font-inter), Inter, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply font-sans text-body font-normal leading-body text-neutral-900 antialiased;
+    @apply font-sans text-body font-normal leading-body text-neutral-900;
   }
 
   h1 {

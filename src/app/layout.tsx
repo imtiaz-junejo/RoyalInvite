@@ -101,18 +101,14 @@ export default function RootLayout({
   ]
 
   return (
-    <html
-      lang="en"
-      className={inter.variable}
-      suppressHydrationWarning
-    >
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: buildJsonLd(jsonLd) }}
         />
       </head>
-      <body className="flex min-h-screen flex-col">
+      <body className={`${inter.className} flex min-h-screen flex-col font-sans antialiased`}>
         <SiteNav />
         <main className="flex min-h-0 flex-1 flex-col">{children}</main>
       </body>

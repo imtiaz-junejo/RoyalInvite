@@ -1,11 +1,4 @@
-import { Fraunces } from "next/font/google"
 import { Check, Search, X } from "lucide-react"
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["700"],
-  display: "swap",
-})
 
 const terracotta = "#894c38"
 const cardBg = "#e8ddd4"
@@ -68,7 +61,7 @@ function InvitationCard() {
         </p>
 
         <p
-          className={`${fraunces.className} mt-5 text-[28px] font-bold leading-[0.95] tracking-tight`}
+          className="mt-5 font-sans text-[28px] font-bold leading-[0.95] tracking-tight"
           style={{ color: terracotta }}
         >
           Natasha

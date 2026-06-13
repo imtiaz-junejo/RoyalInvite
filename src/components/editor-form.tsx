@@ -51,11 +51,11 @@ export function EditorForm({
   const sectionBorderStyle = isLight ? undefined : { borderColor: "rgba(201,168,76,0.3)" }
   const sectionLabelClass = isLight
     ? "text-xs font-semibold uppercase tracking-wide text-neutral-500"
-    : "font-cinzel text-[11px] tracking-[2px] uppercase flex items-center gap-2"
+    : "font-sans text-[11px] font-semibold tracking-[2px] uppercase flex items-center gap-2"
   const sectionLabelStyle = isLight ? undefined : { color: "rgba(232,213,163,0.8)" }
   const quickLabelClass = isLight
     ? "mb-3 text-xs font-semibold uppercase tracking-wide text-neutral-500"
-    : "text-[10px] tracking-[1.5px] uppercase mb-3 font-cinzel"
+    : "text-[10px] font-semibold tracking-[1.5px] uppercase mb-3 font-sans"
   const quickLabelStyle = isLight ? undefined : { color: "rgba(232,213,163,0.8)" }
   const { register, watch, setValue, getValues, formState: { errors } } = useForm<InvitationForm>({
     resolver: zodResolver(invitationSchema),
@@ -207,7 +207,7 @@ export function EditorForm({
                               className="w-7 h-3 rounded-full mb-1.5"
                               style={{ background: `linear-gradient(90deg, ${t.bg}, ${t.accent})` }}
                             />
-                            <span className="text-[10px] tracking-wide font-cinzel" style={{ color: "rgba(255,255,255,0.8)" }}>
+                            <span className="text-[10px] font-medium tracking-wide font-sans" style={{ color: "rgba(255,255,255,0.8)" }}>
                               {t.name}
                             </span>
                           </button>

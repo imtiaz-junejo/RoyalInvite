@@ -58,9 +58,11 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
         heading: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
-        cormorant: ['Georgia', 'Times New Roman', 'serif'],
         lato: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        /** Invitation preview / microsite display fonts only */
+        cormorant: ['Georgia', 'Times New Roman', 'serif'],
         cinzel: ['Georgia', 'Times New Roman', 'serif'],
       },
       fontSize: {
