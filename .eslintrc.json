@@ -7,6 +7,10 @@
       {
         "selector": "CallExpression[callee.object.name='Math'][callee.property.name='random']",
         "message": "Avoid Math.random() during render. Use useEffect or event handlers for non-deterministic values."
+      },
+      {
+        "selector": "BinaryExpression[operator='!=='] > Identifier[name='undefined'][left=false] MemberExpression[object.name='window']",
+        "message": "Avoid typeof window checks during render. Use useMounted(), useIsClient(), or useEffect."
       }
     ]
   }

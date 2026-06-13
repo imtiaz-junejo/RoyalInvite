@@ -16,7 +16,7 @@ export function HomeHero({ session }: HomeHeroProps) {
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-4 py-10 sm:px-6 md:grid-cols-2 md:gap-12 md:py-12 lg:gap-14 lg:px-8 xl:px-10">
         {/* Left — premium copy */}
         <div className="max-w-xl">
-          <Link href="/" className={`inline-flex items-center gap-2.5 ${type.navBrand}`}>
+          <Link href="/" className="type-nav-brand inline-flex items-center gap-2.5">
             <span
               className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-base shadow-sm"
               style={{

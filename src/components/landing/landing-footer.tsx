@@ -206,7 +206,7 @@ export function LandingFooter({ session }: LandingFooterProps) {
 
             <Link
               href="/"
-              className={`flex items-center gap-2 ${type.navBrand}`}
+              className="type-nav-brand flex items-center gap-2"
               aria-label={siteConfig.name}
             >
               <span

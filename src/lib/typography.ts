@@ -23,10 +23,10 @@ export const type = {
   link: "font-sans text-secondary font-medium text-[#2563eb] hover:underline",
   linkInline: "font-sans text-body font-medium text-[#2563eb] hover:underline",
 
-  /** Navbar — prefer `.type-nav` in components; kept for non-nav usage */
+  /** Navbar — use `.type-nav*` CSS classes in markup (SSR-stable; see globals.css) */
   nav: "type-nav",
-  navBrand: "font-sans text-secondary font-semibold tracking-tight text-neutral-900",
-  navCta: "font-sans text-secondary font-semibold",
+  navBrand: "type-nav-brand",
+  navCta: "type-nav-cta",
 
   btn: "font-sans text-secondary font-semibold",
   btnMd: "font-sans text-body font-semibold",

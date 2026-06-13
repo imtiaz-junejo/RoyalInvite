@@ -37,7 +37,7 @@ export function LandingNav({ session, user }: LandingNavProps) {
       className="sticky top-0 z-[100] shrink-0 border-b border-neutral-200/80 bg-white/95 shadow-sm shadow-neutral-900/5 backdrop-blur-md supports-[backdrop-filter]:bg-white/90"
     >
       <div className="flex h-14 w-full items-center justify-between gap-3 px-4 sm:h-[3.75rem] sm:px-6 lg:px-8 xl:px-10">
-        <Link href="/" className={`flex shrink-0 items-center gap-2 py-1 ${type.navBrand}`}>
+        <Link href="/" className="type-nav-brand flex shrink-0 items-center gap-2 py-1">
           <span
             className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-lg shadow-sm"
             style={{
@@ -59,7 +59,7 @@ export function LandingNav({ session, user }: LandingNavProps) {
             <>
               <Link
                 href="/dashboard"
-                className={`rounded-full bg-gradient-to-r from-[#4f6df5] to-[#7a5af1] px-3.5 py-2 ${type.navCta} text-white shadow-md shadow-indigo-500/25 transition hover:opacity-95 sm:px-4`}
+                className="type-nav-cta rounded-full bg-gradient-to-r from-[#4f6df5] to-[#7a5af1] px-3.5 py-2 text-white shadow-md shadow-indigo-500/25 transition hover:opacity-95 sm:px-4"
               >
                 Dashboard
               </Link>
@@ -99,7 +99,7 @@ export function LandingNav({ session, user }: LandingNavProps) {
               </Link>
               <Link
                 href="/sign-up"
-                className={`rounded-full bg-gradient-to-r from-[#4f6df5] to-[#7a5af1] px-3.5 py-2 ${type.navCta} text-white shadow-md shadow-indigo-500/25 transition hover:opacity-95 sm:px-4`}
+                className="type-nav-cta rounded-full bg-gradient-to-r from-[#4f6df5] to-[#7a5af1] px-3.5 py-2 text-white shadow-md shadow-indigo-500/25 transition hover:opacity-95 sm:px-4"
               >
                 Start creating
               </Link>

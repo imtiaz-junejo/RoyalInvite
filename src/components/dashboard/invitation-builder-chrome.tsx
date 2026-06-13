@@ -1,6 +1,9 @@
+"use client"
+
 import type { ReactNode } from "react"
 import { Sparkles } from "lucide-react"
 import { Button, ButtonLink } from "@/components/ui/button"
+import { InvitationBuilderPreviewPanel } from "@/components/dashboard/invitation-builder-preview-panel"
 import { dashboardTheme as dt } from "@/components/dashboard/dashboard-theme"
 import { type } from "@/lib/typography"
 
@@ -19,7 +22,6 @@ export function InvitationBuilderChrome({ aside, preview, toolbar }: InvitationB
       <div
         className={`grid ${BUILDER_HEIGHT} grid-rows-2 overflow-hidden lg:grid-cols-[minmax(280px,380px)_1fr] lg:grid-rows-1`}
       >
-        {/* Editor sidebar — fixed height, scrolls independently */}
         <aside className={`${dt.builderAside} min-h-0 border-b border-neutral-200 lg:border-b-0`}>
           <div className="shrink-0 border-b border-neutral-200 bg-gradient-to-r from-indigo-50 via-violet-50 to-fuchsia-50 px-6 py-4">
             <div className="flex items-center gap-2">
@@ -32,24 +34,17 @@ export function InvitationBuilderChrome({ aside, preview, toolbar }: InvitationB
               </div>
             </div>
           </div>
-          <div className={dt.builderAsideScroll}>
-            {aside}
-          </div>
+          <div className={dt.builderAsideScroll}>{aside}</div>
         </aside>
 
-        {/* Preview panel — stays in viewport; invitation content scrolls inside */}
         <section className="relative z-[1] flex min-h-0 flex-col overflow-hidden">
           {toolbar && (
             <div className="relative z-[2] shrink-0 border-b border-neutral-200 bg-neutral-50 px-4 py-3">
               <div className="flex flex-wrap justify-center gap-2">{toolbar}</div>
             </div>
           )}
-          <div className="flex min-h-0 flex-1 items-start justify-center overflow-hidden px-4 py-5 sm:px-6 sm:py-6 lg:px-8">
-            <div className="flex h-full w-full max-w-2xl flex-col lg:sticky lg:top-6 lg:max-h-[calc(100vh-var(--site-nav-height)-48px)]">
-              <div className={dt.builderPreviewScroll}>
-                {preview}
-              </div>
-            </div>
+          <div className="flex min-h-0 flex-1 flex-col overflow-hidden px-2 py-2 sm:px-3 sm:py-3">
+            <InvitationBuilderPreviewPanel>{preview}</InvitationBuilderPreviewPanel>
           </div>
         </section>
       </div>
