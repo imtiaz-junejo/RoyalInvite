@@ -29,6 +29,10 @@
     --tracking-eyebrow: 0.14em;
   }
 
+  .dark {
+    --border: rgba(201, 168, 76, 0.25);
+  }
+
   * {
     border-color: var(--border);
   }
@@ -41,37 +45,37 @@
   }
 
   body {
-    @apply font-sans text-body font-normal leading-body text-neutral-900;
+    @apply font-sans text-body font-normal leading-body text-neutral-900 dark:text-neutral-100;
   }
 
   h1 {
-    @apply font-sans text-h1 font-semibold tracking-tight text-neutral-950;
+    @apply font-sans text-h1 font-semibold tracking-tight text-neutral-950 dark:text-neutral-50;
   }
 
   h2 {
-    @apply font-sans text-h2 font-semibold tracking-tight text-neutral-950;
+    @apply font-sans text-h2 font-semibold tracking-tight text-neutral-950 dark:text-neutral-50;
   }
 
   h3 {
-    @apply font-sans text-h3 font-semibold tracking-tight text-neutral-950;
+    @apply font-sans text-h3 font-semibold tracking-tight text-neutral-950 dark:text-neutral-50;
   }
 
   h4 {
-    @apply font-sans text-h4 font-semibold tracking-tight text-neutral-950;
+    @apply font-sans text-h4 font-semibold tracking-tight text-neutral-950 dark:text-neutral-50;
   }
 
   h5 {
-    @apply font-sans text-h5 font-semibold tracking-tight text-neutral-950;
+    @apply font-sans text-h5 font-semibold tracking-tight text-neutral-950 dark:text-neutral-50;
   }
 }
 
 @layer components {
   .type-nav {
-    @apply font-sans text-secondary font-medium text-neutral-600;
+    @apply font-sans text-secondary font-medium text-neutral-600 dark:text-neutral-400;
   }
 
   .type-nav-brand {
-    @apply font-sans text-secondary font-semibold tracking-tight text-neutral-900;
+    @apply font-sans text-secondary font-semibold tracking-tight text-neutral-900 dark:text-neutral-100;
   }
 
   .type-nav-cta {
@@ -79,19 +83,19 @@
   }
 
   .type-eyebrow {
-    @apply font-sans text-caption font-semibold uppercase tracking-eyebrow text-neutral-500;
+    @apply font-sans text-caption font-semibold uppercase tracking-eyebrow text-neutral-500 dark:text-neutral-400;
   }
 
   .type-prose {
-    @apply font-sans text-body font-normal leading-body text-neutral-700;
+    @apply font-sans text-body font-normal leading-body text-neutral-700 dark:text-neutral-300;
   }
 
   .type-prose-secondary {
-    @apply font-sans text-secondary font-normal leading-body text-neutral-600;
+    @apply font-sans text-secondary font-normal leading-body text-neutral-600 dark:text-neutral-400;
   }
 
   .type-quote {
-    @apply font-sans text-h4 font-medium italic leading-snug tracking-tight text-neutral-800;
+    @apply font-sans text-h4 font-medium italic leading-snug tracking-tight text-neutral-800 dark:text-neutral-200;
   }
 
   .type-template-preview {

@@ -39,7 +39,10 @@ export const invitationSchema = z.object({
   musicUrl: z.string().url().optional().or(z.literal("")),
   fontKey: z.enum(["cormorant", "cinzel", "lato"]).default("cormorant"),
   themeKey: z.enum(["gold", "rose", "emerald", "ivory"]).default("gold"),
-  templateKey: z.enum(["royal", "floral", "modern", "mehndi", "nikah", "heritage"]).default("royal"),
+  templateKey: z.enum([
+    "royal", "floral", "modern", "mehndi", "nikah", "heritage",
+    "midnight", "bohemian", "tropical", "vintage", "arabesque", "celestial"
+  ]).default("royal"),
   customStyles: z.string().optional(),
   isPublished: z.boolean().default(false),
 })

@@ -36,9 +36,9 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 80, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            className="fixed bottom-8 right-8 z-[9999] rounded-full border border-accent bg-surface px-6 py-3.5 shadow-2xl"
+            className="fixed bottom-8 right-8 z-[9999] rounded-full border border-accent bg-surface px-6 py-3.5 shadow-2xl dark:bg-neutral-800 dark:border-neutral-700"
           >
-            <span className="text-accent font-cinzel text-xs tracking-wider">
+            <span className="text-accent font-cinzel text-xs tracking-wider dark:text-neutral-100">
               {toast.message}
             </span>
           </motion.div>

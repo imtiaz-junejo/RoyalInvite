@@ -121,7 +121,7 @@ export function LandingFooter({ session }: LandingFooterProps) {
   const year = getCopyrightYear()
 
   return (
-    <footer className="border-t border-neutral-200 bg-[#f5f5f5]">
+    <footer className="border-t border-neutral-200 bg-[#f5f5f5] dark:border-neutral-800 dark:bg-neutral-900">
       <div className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 lg:px-8 xl:px-10">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {footerColumns.map((col) => (
@@ -139,7 +139,7 @@ export function LandingFooter({ session }: LandingFooterProps) {
         </div>
       </div>
 
-      <div className="border-y border-neutral-200/90 bg-[#f5f5f5]">
+      <div className="border-y border-neutral-200/90 bg-[#f5f5f5] dark:border-neutral-800 dark:bg-neutral-900">
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-x-6 gap-y-4 px-4 py-5 sm:px-6 lg:px-8 xl:px-10">
           <span className={type.footerCol}>Featured themes</span>
           <ul className="flex flex-wrap items-center gap-5">
@@ -164,15 +164,15 @@ export function LandingFooter({ session }: LandingFooterProps) {
         </div>
       </div>
 
-      <div className="bg-[#f5f5f5]">
+      <div className="bg-[#f5f5f5] dark:bg-neutral-900">
         <div className="mx-auto max-w-[1400px] px-4 py-6 sm:px-6 lg:px-8 xl:px-10">
           <div className="flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-            <div className={`flex flex-wrap items-center gap-4 ${type.small} text-neutral-700`}>
+            <div className={`flex flex-wrap items-center gap-4 ${type.small} text-neutral-700 dark:text-neutral-300`}>
               <span className="inline-flex items-center gap-1 font-medium">
                 English (US)
                 <ChevronDown className="h-4 w-4 opacity-60" aria-hidden />
               </span>
-              <span className="hidden text-neutral-300 sm:inline" aria-hidden>
+              <span className="hidden text-neutral-300 sm:inline dark:text-neutral-700" aria-hidden>
                 |
               </span>
               <span className="inline-flex items-center gap-1 font-medium">
@@ -191,7 +191,7 @@ export function LandingFooter({ session }: LandingFooterProps) {
                 <li key={label}>
                   <Link
                     href={href}
-                    className="text-neutral-600 transition-colors hover:text-neutral-900"
+                    className="text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
                     aria-label={label}
                   >
                     {label === "X" ? (
@@ -222,24 +222,24 @@ export function LandingFooter({ session }: LandingFooterProps) {
             </Link>
           </div>
 
-          <div className={`mt-6 flex flex-col gap-4 border-t border-neutral-200/80 pt-6 ${type.footerMeta} sm:flex-row sm:flex-wrap sm:items-center sm:justify-between`}>
+          <div className={`mt-6 flex flex-col gap-4 border-t border-neutral-200/80 pt-6 ${type.footerMeta} dark:border-neutral-800 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between`}>
             <p>
               Copyright © {year} {siteConfig.creator} Invite. All rights reserved.
             </p>
             <nav className="flex flex-wrap items-center gap-x-1 gap-y-2" aria-label="Legal">
-              <Link href="/privacy" className="hover:text-neutral-900 hover:underline">
+              <Link href="/privacy" className="hover:text-neutral-900 hover:underline dark:hover:text-neutral-100">
                 Privacy
               </Link>
-              <span className="px-1 text-neutral-400">/</span>
-              <Link href="/terms" className="hover:text-neutral-900 hover:underline">
+              <span className="px-1 text-neutral-400 dark:text-neutral-600">/</span>
+              <Link href="/terms" className="hover:text-neutral-900 hover:underline dark:hover:text-neutral-100">
                 Terms of Use
               </Link>
-              <span className="px-1 text-neutral-400">/</span>
-              <Link href="/contact" className="hover:text-neutral-900 hover:underline">
+              <span className="px-1 text-neutral-400 dark:text-neutral-600">/</span>
+              <Link href="/contact" className="hover:text-neutral-900 hover:underline dark:hover:text-neutral-100">
                 Contact
               </Link>
-              <span className="px-1 text-neutral-400">/</span>
-              <Link href="/privacy" className="hover:text-neutral-900 hover:underline">
+              <span className="px-1 text-neutral-400 dark:text-neutral-600">/</span>
+              <Link href="/privacy" className="hover:text-neutral-900 hover:underline dark:hover:text-neutral-100">
                 Cookie preferences
               </Link>
             </nav>

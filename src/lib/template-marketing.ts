@@ -32,6 +32,36 @@ const marketingMeta: Record<
     gradient: "from-[#1a1208] via-[#4a380c] to-[#2d2010]",
     tag: "Popular",
   },
+  midnight: {
+    desc: "Sophisticated midnight elegance with celestial accents.",
+    gradient: "from-[#0f172a] via-[#1e293b] to-[#0f172a]",
+    tag: "New",
+  },
+  bohemian: {
+    desc: "Free-spirited boho vibes with earthy warmth and natural beauty.",
+    gradient: "from-[#78350f] via-[#92400e] to-[#451a03]",
+    tag: "New",
+  },
+  tropical: {
+    desc: "Vibrant tropical paradise with ocean blues and sunset hues.",
+    gradient: "from-[#064e3b] via-[#047857] to-[#065f46]",
+    tag: "New",
+  },
+  vintage: {
+    desc: "Timeless vintage charm with sepia tones and romantic lace details.",
+    gradient: "from-[#44403c] via-[#57534e] to-[#292524]",
+    tag: "New",
+  },
+  arabesque: {
+    desc: "Opulent Arabian nights with rich gold and intricate patterns.",
+    gradient: "from-[#4a1d96] via-[#6d28d9] to-[#3b0764]",
+    tag: "New",
+  },
+  celestial: {
+    desc: "Cosmic wonder with starry nights and ethereal moonlight.",
+    gradient: "from-[#1e1b4b] via-[#312e81] to-[#0f0d3d]",
+    tag: "New",
+  },
 }
 
 export type MarketingTemplate = {

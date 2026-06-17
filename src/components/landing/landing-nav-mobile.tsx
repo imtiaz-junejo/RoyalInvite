@@ -13,7 +13,7 @@ export function LandingNavMobile({ mobileLinks }: LandingNavMobileProps) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="border-t border-neutral-200/80 md:hidden">
+    <div className="border-t border-neutral-200/80 dark:border-neutral-800 md:hidden">
       <button
         type="button"
         className="type-nav flex w-full items-center justify-between px-4 py-2.5"
@@ -30,7 +30,7 @@ export function LandingNavMobile({ mobileLinks }: LandingNavMobileProps) {
       </button>
       <nav
         id="mobile-main-nav"
-        className={cn("border-t border-neutral-100 px-4 py-3", !open && "hidden")}
+        className={cn("border-t border-neutral-100 px-4 py-3 dark:border-neutral-800", !open && "hidden")}
         aria-label="Main mobile"
         aria-hidden={!open}
       >

@@ -42,18 +42,18 @@ export function Modal({ open, onOpenChange, title, subtitle, children }: ModalPr
             exit={{ opacity: 0, y: 20, scale: 0.97 }}
             className="fixed inset-0 z-[1001] flex items-center justify-center p-5 pointer-events-none"
           >
-            <div className="relative bg-bg2 border border-gold-400/30 rounded-[20px] p-10 max-w-md w-full pointer-events-auto shadow-2xl">
+            <div className="relative bg-bg2 border border-gold-400/30 rounded-[20px] p-10 max-w-md w-full pointer-events-auto shadow-2xl dark:bg-neutral-900 dark:border-neutral-700">
               <button
                 onClick={() => onOpenChange(false)}
-                className="absolute top-4 right-5 text-text/50 hover:text-text transition-opacity"
+                className="absolute top-4 right-5 text-text/50 hover:text-text transition-opacity dark:text-neutral-400 dark:hover:text-neutral-200"
               >
                 <X size={20} />
               </button>
-              <h2 className="font-cinzel text-lg tracking-widest text-accent text-center mb-2">
+              <h2 className="font-cinzel text-lg tracking-widest text-accent text-center mb-2 dark:text-indigo-400">
                 {title}
               </h2>
               {subtitle && (
-                <p className="text-xs text-text/60 text-center mb-7 tracking-wide">
+                <p className="text-xs text-text/60 text-center mb-7 tracking-wide dark:text-neutral-400">
                   {subtitle}
                 </p>
               )}

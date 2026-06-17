@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site"
 import { type } from "@/lib/typography"
 import { LandingNavLinks } from "./landing-nav-links"
 import { LandingNavMobile } from "./landing-nav-mobile"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 /** Matches `h-14` / `sm:h-[3.75rem]` — use for full-height layouts below the global nav */
 export const SITE_NAV_HEIGHT = "3.75rem"
@@ -34,7 +35,7 @@ export function LandingNav({ session, user }: LandingNavProps) {
   return (
     <header
       id="site-nav"
-      className="sticky top-0 z-[100] shrink-0 border-b border-neutral-200/80 bg-white/95 shadow-sm shadow-neutral-900/5 backdrop-blur-md supports-[backdrop-filter]:bg-white/90"
+      className="sticky top-0 z-[100] shrink-0 border-b border-neutral-200/80 bg-white/95 shadow-sm shadow-neutral-900/5 backdrop-blur-md supports-[backdrop-filter]:bg-white/90 dark:border-neutral-800 dark:bg-neutral-950/95 dark:shadow-black/20 dark:supports-[backdrop-filter]:bg-neutral-950/90"
     >
       <div className="flex h-14 w-full items-center justify-between gap-3 px-4 sm:h-[3.75rem] sm:px-6 lg:px-8 xl:px-10">
         <Link href="/" className="type-nav-brand flex shrink-0 items-center gap-2 py-1">
@@ -55,6 +56,7 @@ export function LandingNav({ session, user }: LandingNavProps) {
         </nav>
 
         <div className="flex shrink-0 items-center justify-end gap-1.5 sm:gap-2">
+          <ThemeToggle />
           {session ? (
             <>
               <Link
@@ -65,14 +67,14 @@ export function LandingNav({ session, user }: LandingNavProps) {
               </Link>
               <Link
                 href="/dashboard"
-                className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-600 transition-colors hover:bg-neutral-100"
+                className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-600 transition-colors hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
                 aria-label="Notifications"
               >
                 <Bell className="h-[1.35rem] w-[1.35rem]" strokeWidth={1.75} />
               </Link>
               <Link
                 href="/dashboard/settings"
-                className={`relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[#6366f1] to-[#7c3aed] ${type.small} font-semibold text-white ring-2 ring-white shadow-sm`}
+                className={`relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[#6366f1] to-[#7c3aed] ${type.small} font-semibold text-white ring-2 ring-white shadow-sm dark:ring-neutral-900`}
                 aria-label="Account"
               >
                 {user?.image && user.image.trim() !== "" ? (
@@ -93,7 +95,7 @@ export function LandingNav({ session, user }: LandingNavProps) {
             <>
               <Link
                 href="/sign-in"
-                className="type-nav rounded-full px-3 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-900"
+                className="type-nav rounded-full px-3 py-2 transition-colors hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
               >
                 Sign in
               </Link>
@@ -105,14 +107,14 @@ export function LandingNav({ session, user }: LandingNavProps) {
               </Link>
               <Link
                 href="/sign-in"
-                className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-600 transition-colors hover:bg-neutral-100"
+                className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-600 transition-colors hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
                 aria-label="Notifications"
               >
                 <Bell className="h-[1.35rem] w-[1.35rem]" strokeWidth={1.75} />
               </Link>
               <Link
                 href="/sign-in"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-200 text-neutral-600 ring-2 ring-white transition-colors hover:bg-neutral-300"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-200 text-neutral-600 ring-2 ring-white transition-colors hover:bg-neutral-300 dark:bg-neutral-800 dark:text-neutral-400 dark:ring-neutral-900 dark:hover:bg-neutral-700"
                 aria-label="Account"
               >
                 <User className="h-5 w-5" strokeWidth={1.75} />

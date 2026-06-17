@@ -3,25 +3,25 @@
  * Body 15px · Secondary 14px · Small 13px · Caption 12px
  */
 export const type = {
-  h1: "font-sans text-h1 font-semibold tracking-tight text-neutral-950",
-  h2: "font-sans text-h2 font-semibold tracking-tight text-neutral-950",
-  h3: "font-sans text-h3 font-semibold tracking-tight text-neutral-950",
-  h4: "font-sans text-h4 font-semibold tracking-tight text-neutral-950",
-  h5: "font-sans text-h5 font-semibold tracking-tight text-neutral-950",
+  h1: "font-sans text-h1 font-semibold tracking-tight text-neutral-950 dark:text-neutral-50",
+  h2: "font-sans text-h2 font-semibold tracking-tight text-neutral-950 dark:text-neutral-50",
+  h3: "font-sans text-h3 font-semibold tracking-tight text-neutral-950 dark:text-neutral-50",
+  h4: "font-sans text-h4 font-semibold tracking-tight text-neutral-950 dark:text-neutral-50",
+  h5: "font-sans text-h5 font-semibold tracking-tight text-neutral-950 dark:text-neutral-50",
 
-  body: "font-sans text-body font-normal leading-body text-neutral-700",
-  secondary: "font-sans text-secondary font-normal leading-body text-neutral-600",
+  body: "font-sans text-body font-normal leading-body text-neutral-700 dark:text-neutral-300",
+  secondary: "font-sans text-secondary font-normal leading-body text-neutral-600 dark:text-neutral-400",
   /** @deprecated use type.secondary */
-  bodyLg: "font-sans text-secondary font-normal leading-body text-neutral-600",
-  bodyStrong: "font-sans text-body font-medium text-neutral-800",
-  small: "font-sans text-small font-normal leading-snug text-neutral-600",
-  caption: "font-sans text-caption font-normal leading-normal text-neutral-500",
+  bodyLg: "font-sans text-secondary font-normal leading-body text-neutral-600 dark:text-neutral-400",
+  bodyStrong: "font-sans text-body font-medium text-neutral-800 dark:text-neutral-200",
+  small: "font-sans text-small font-normal leading-snug text-neutral-600 dark:text-neutral-400",
+  caption: "font-sans text-caption font-normal leading-normal text-neutral-500 dark:text-neutral-500",
 
-  eyebrow: "font-sans text-caption font-semibold uppercase tracking-eyebrow text-neutral-500",
-  label: "font-sans text-caption font-semibold uppercase tracking-eyebrow text-neutral-500",
+  eyebrow: "font-sans text-caption font-semibold uppercase tracking-eyebrow text-neutral-500 dark:text-neutral-400",
+  label: "font-sans text-caption font-semibold uppercase tracking-eyebrow text-neutral-500 dark:text-neutral-400",
 
-  link: "font-sans text-secondary font-medium text-[#2563eb] hover:underline",
-  linkInline: "font-sans text-body font-medium text-[#2563eb] hover:underline",
+  link: "font-sans text-secondary font-medium text-[#2563eb] hover:underline dark:text-[#60a5fa]",
+  linkInline: "font-sans text-body font-medium text-[#2563eb] hover:underline dark:text-[#60a5fa]",
 
   /** Navbar — use `.type-nav*` CSS classes in markup (SSR-stable; see globals.css) */
   nav: "type-nav",
@@ -33,33 +33,33 @@ export const type = {
   /** @deprecated use type.btnMd */
   btnLg: "font-sans text-body font-semibold",
 
-  price: "font-sans text-h2 font-semibold tabular-nums tracking-tight text-neutral-950",
-  priceMeta: "font-sans text-secondary text-neutral-500",
-  planName: "font-sans text-caption font-semibold uppercase tracking-eyebrow text-neutral-500",
+  price: "font-sans text-h2 font-semibold tabular-nums tracking-tight text-neutral-950 dark:text-neutral-50",
+  priceMeta: "font-sans text-secondary text-neutral-500 dark:text-neutral-400",
+  planName: "font-sans text-caption font-semibold uppercase tracking-eyebrow text-neutral-500 dark:text-neutral-400",
 
   promo: "font-sans text-secondary font-semibold leading-snug text-white",
   promoLg: "font-sans text-h3 font-semibold leading-snug tracking-tight text-white",
   promoSub: "font-sans text-secondary font-normal leading-relaxed text-white/90",
 
-  stat: "font-sans text-h4 font-semibold tabular-nums tracking-tight text-neutral-950",
-  statLabel: "font-sans text-caption font-medium uppercase tracking-eyebrow text-neutral-500",
+  stat: "font-sans text-h4 font-semibold tabular-nums tracking-tight text-neutral-950 dark:text-neutral-50",
+  statLabel: "font-sans text-caption font-medium uppercase tracking-eyebrow text-neutral-500 dark:text-neutral-400",
 
   badge: "font-sans text-caption font-semibold uppercase tracking-wide",
   chip: "font-sans text-caption font-medium",
 
-  cardTitle: "font-sans text-secondary font-semibold text-neutral-900",
-  cardBody: "font-sans text-secondary font-normal leading-relaxed text-neutral-600",
+  cardTitle: "font-sans text-secondary font-semibold text-neutral-900 dark:text-neutral-100",
+  cardBody: "font-sans text-secondary font-normal leading-relaxed text-neutral-600 dark:text-neutral-400",
 
-  quote: "font-sans text-h4 font-medium italic leading-snug tracking-tight text-neutral-800",
+  quote: "font-sans text-h4 font-medium italic leading-snug tracking-tight text-neutral-800 dark:text-neutral-200",
   templatePreview: "font-sans text-h5 font-semibold tracking-tight",
   templatePreviewSub: "font-sans text-caption leading-snug text-white/75",
 
-  footerCol: "font-sans text-secondary font-semibold text-neutral-900",
-  footerLink: "font-sans text-secondary text-neutral-700 hover:text-neutral-950 hover:underline",
-  footerMeta: "font-sans text-caption text-neutral-600",
+  footerCol: "font-sans text-secondary font-semibold text-neutral-900 dark:text-neutral-100",
+  footerLink: "font-sans text-secondary text-neutral-700 hover:text-neutral-950 hover:underline dark:text-neutral-300 dark:hover:text-neutral-100",
+  footerMeta: "font-sans text-caption text-neutral-600 dark:text-neutral-400",
 
-  error: "font-sans text-secondary text-red-700",
-  muted: "font-sans text-secondary text-neutral-500",
+  error: "font-sans text-secondary text-red-700 dark:text-red-400",
+  muted: "font-sans text-secondary text-neutral-500 dark:text-neutral-500",
 } as const
 
 export const typeDark = {

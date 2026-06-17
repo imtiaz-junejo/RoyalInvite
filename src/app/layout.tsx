@@ -4,6 +4,7 @@ import "./globals.css"
 import { absoluteUrl, siteConfig } from "@/lib/site"
 import { buildJsonLd, schemas } from "@/lib/seo"
 import { SiteNav } from "@/components/site-nav"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -104,13 +105,30 @@ export default function RootLayout({
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  if (theme === 'dark' || (!theme && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: buildJsonLd(jsonLd) }}
         />
       </head>
       <body className={`${inter.className} flex min-h-screen flex-col font-sans antialiased`}>
-        <SiteNav />
-        <main className="flex min-h-0 flex-1 flex-col">{children}</main>
+        <ThemeProvider>
+          <SiteNav />
+          <main className="flex min-h-0 flex-1 flex-col">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   )

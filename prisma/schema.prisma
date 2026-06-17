@@ -15,6 +15,8 @@ model User {
   passwordHash   String
   role           String          @default("user")
   tier           String          @default("free")
+  company        String?         @db.VarChar(255)
+  timezone       String          @default("UTC")
   createdAt      DateTime        @default(now())
   updatedAt      DateTime        @updatedAt
   invitations    Invitation[]

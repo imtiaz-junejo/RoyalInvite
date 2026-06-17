@@ -5,7 +5,7 @@ import { InputHTMLAttributes, TextareaHTMLAttributes, forwardRef } from "react"
 const fieldBase = "w-full font-sans transition-colors duration-200 focus:outline-none"
 
 const lightField =
-  "rounded-lg border border-neutral-200 bg-white px-3 py-2 text-body text-neutral-900 shadow-sm placeholder:text-neutral-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
+  "rounded-lg border border-neutral-200 bg-white px-3 py-2 text-body text-neutral-900 shadow-sm placeholder:text-neutral-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder:text-neutral-500 dark:focus:border-indigo-500 dark:focus:ring-indigo-500/20"
 
 const darkField =
   "rounded-lg border border-white/10 bg-black/30 px-3 py-2 text-secondary text-[#fdf8f0] placeholder:text-[#fdf8f0]/30 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20"
@@ -16,7 +16,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, label, id, tone = "dark", ...props }, ref) => {
+  ({ className, label, id, tone = "light", ...props }, ref) => {
     const fieldClass = tone === "light" ? lightField : darkField
     const labelClass = tone === "light" ? type.label : typeDark.label
 
@@ -40,7 +40,7 @@ interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 }
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, label, id, tone = "dark", ...props }, ref) => {
+  ({ className, label, id, tone = "light", ...props }, ref) => {
     const fieldClass = tone === "light" ? `${lightField} resize-y` : `${darkField} resize-y`
     const labelClass = tone === "light" ? type.label : typeDark.label
 
@@ -65,7 +65,7 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 }
 
 const Select = forwardRef<HTMLSelectElement, SelectProps>(
-  ({ className, label, id, children, tone = "dark", ...props }, ref) => {
+  ({ className, label, id, children, tone = "light", ...props }, ref) => {
     const fieldClass =
       tone === "light"
         ? `${lightField} cursor-pointer appearance-none`

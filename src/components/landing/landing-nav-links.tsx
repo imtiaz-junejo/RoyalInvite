@@ -16,7 +16,7 @@ export function LandingNavLinks({ className = "" }: { className?: string }) {
     <ul className={cn(listBase, className)}>
       {links.map((link) => (
         <li key={link.href}>
-          <Link href={link.href} className="transition-colors hover:text-neutral-900">
+          <Link href={link.href} className="transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">
             {link.label}
           </Link>
         </li>

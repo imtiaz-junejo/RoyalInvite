@@ -1,9 +1,9 @@
 import { redirect } from "next/navigation"
 import { auth } from "@/lib/auth"
 import { prisma } from "@/lib/db"
-import { SettingsClient } from "@/components/dashboard/settings-client"
+import { BillingClient } from "./billing-client"
 
-export default async function SettingsPage() {
+export default async function BillingPage() {
   const session = await auth()
   if (!session?.user?.id) redirect("/sign-in")
 
@@ -13,8 +13,6 @@ export default async function SettingsPage() {
       id: true,
       name: true,
       email: true,
-      company: true,
-      timezone: true,
       tier: true,
       _count: { select: { invitations: true } },
     },
@@ -23,16 +21,11 @@ export default async function SettingsPage() {
   if (!user) redirect("/sign-in")
 
   return (
-    <SettingsClient
-      user={{
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        company: user.company,
-        timezone: user.timezone,
-        tier: user.tier,
-        invitationCount: user._count.invitations,
-      }}
+    <BillingClient
+      userName={user.name}
+      userEmail={user.email}
+      tier={user.tier as "free" | "pro"}
+      invitationCount={user._count.invitations}
     />
   )
 }
